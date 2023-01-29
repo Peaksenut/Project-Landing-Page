@@ -1,26 +1,29 @@
-@font-face {
-    font-family: 'Hero-Regular';
-    src: url(/home/pj/Downloads/Hero-Regular.otf);
-}
-
 body {
     padding: 0;
     margin: 0;
-    font-family: 'Hero-Regular', sans-serif;
+    font-family: 'Arial', sans-serif;
 }
 
-.upper-header, .lower-header {
-    margin-left: 85px;
-    margin-right: 85px;
+.upper-header, .lower-header, 
+.upper-main, .middle-main, 
+.lower-main {
+    padding-left: 120px;
+    padding-right: 120px;
+    align-items: center;
 }
+
+.lower-header, .upper-main,
+.middle-main {
+    min-height: 430px;
+}
+
+/*header*/
 
 header {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     color: white;
     background: #1F2937;
-
     padding: 10px 16px;
 }
 
@@ -51,8 +54,6 @@ a {
     align-items: space-around;
     flex-wrap: wrap;
     gap: 10px;
-    margin-top: 40px;
-    margin-bottom: 40px;
 }
 
 .text-header {
@@ -87,7 +88,7 @@ a {
     object-fit: cover;
 }
 
-.text-header button {
+button {
     font-weight: bold;
     font-size: 15px;
     border-radius: 8px;
@@ -95,4 +96,93 @@ a {
     padding: 10px 20px;
     background-color: #3882f6;
     border: 0;
+    flex-shrink: 0;
+}
+
+/*main*/
+
+.upper-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 30px;
+}
+
+.upper-main h3 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.upper-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 45px;
+}
+
+.upper-content img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    border: 3px solid #1F2937;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.upper-content p {
+    max-width: 150px;
+}
+
+.middle-main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #e5e7eb;
+}
+
+.middle-main h3 {
+    font-weight: lighter;
+    font-style: italic;
+    font-size: 36px;
+    margin: 10px;
+}
+
+.middle-main p {
+    align-self: flex-end;
+    font-weight: bolder;
+    font-size: 22px;
+}
+
+.lower-main {
+    display: flex;
+    align-items: center;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.modal {
+    display: flex;
+    color: white;
+    background-color: #3882f6;
+    border-radius: 10px;
+    width: 100%;
+    padding: 20px 80px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text-content h3, 
+.text-content p {
+    margin: 5px;
+    text-align: start;
+}
+
+.text-content h3 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.modal button {
+    border: 2px solid white;
 }
