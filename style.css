@@ -51,16 +51,16 @@ a {
 
 .lower-header {
     display: flex;
-    align-items: space-around;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .text-header {
     display: flex;
     flex-direction: column;
     flex: 1;
-    justify-content: center;
 }
 
 .text-title {
@@ -185,4 +185,13 @@ button {
 
 .modal button {
     border: 2px solid white;
+}
+
+/* footer */
+
+footer {
+    background-color: #1F2937;
+    color: white;
+    padding: 30px;
+    text-align: center;
 }
